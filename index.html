@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 <style>
+  body {
+    max-width: 54em;
+    margin: 0 auto;
+  }
+
+  img {
+    width: 100%;
+  }
+
   button {
     padding: 1em;
-    background: red;
+    background: blue;
     color: white;
   }
 
@@ -25,16 +35,22 @@
 </head>
 <body>
 
-<h1>Abdul sin nettside</h1>
-<p>Dette er min nettside.</p>
+<h1>Welcome to abdulslave.com</h1>
+<p>This is your portal to the wildest and craziest adventures on the internet! Explore a world of excitement, laughter, and surprises right here at Abdulslave.com. Get ready to dive into a whirlwind of entertainment and thrills.</p>
 <button onclick="hello()">Next image</button>
 <div id="container"></div>
 
 <script>
+  let i = 0
   function hello() {
+    i++;
     let element = document.getElementById("container");
     // Add the 'image' class to the new image element
-    element.innerHTML += `<img alt="Ripped hajji" src="https://preview.redd.it/mlo2gwkop1b31.jpg?auto=webp&s=7702b73f6a4d0791d9006cb0b0eb8a17e3228b26" class="image"/>`
+    if (i % 2 == 0) {
+      element.innerHTML += `<img alt="Ripped hajji" src="slave.jpg" class="image"/>`
+    } else {
+      element.innerHTML += `<img alt="Ripped hajji" src="https://preview.redd.it/mlo2gwkop1b31.jpg?auto=webp&s=7702b73f6a4d0791d9006cb0b0eb8a17e3228b26" class="image"/>`
+    }
   }
 </script>
 
