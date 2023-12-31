@@ -1,0 +1,19 @@
+<h1>Abdul sin nettside</h1>
+<p>Dette er min nettside.</p>
+<button onclick="hello()">Next image</button>
+<div id="container"></div>
+
+<style>
+  button {
+    padding: 1em;
+    background: red;
+    color: white;
+  }
+</style>
+
+<script>
+  function hello() {
+    let element = document.getElementById("container");
+    element.innerHTML += `<img alt="Ripped hajji" src="https://preview.redd.it/mlo2gwkop1b31.jpg?auto=webp&s=7702b73f6a4d0791d9006cb0b0eb8a17e3228b26"/>`
+  }
+</script>
