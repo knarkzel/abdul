@@ -1,19 +1,42 @@
-<h1>Abdul sin nettside</h1>
-<p>Dette er min nettside.</p>
-<button onclick="hello()">Next image</button>
-<div id="container"></div>
-
+<!DOCTYPE html>
+<html>
+<head>
 <style>
   button {
     padding: 1em;
     background: red;
     color: white;
   }
+
+  /* Define a crazy CSS animation */
+  @keyframes crazyAnimation {
+    0% { transform: scale(0.9) rotate(0deg); opacity: 0; }
+    25% { transform: scale(1.2) rotate(90deg); opacity: 0.7; }
+    50% { transform: scale(0.8) rotate(180deg); opacity: 1; }
+    75% { transform: scale(1.2) rotate(270deg); opacity: 0.7; }
+    100% { transform: scale(1) rotate(360deg); opacity: 1; }
+  }
+
+  /* Apply the crazy animation to the image elements */
+  .image {
+    animation: crazyAnimation 1s ease-in-out;
+  }
 </style>
+</head>
+<body>
+
+<h1>Abdul sin nettside</h1>
+<p>Dette er min nettside.</p>
+<button onclick="hello()">Next image</button>
+<div id="container"></div>
 
 <script>
   function hello() {
     let element = document.getElementById("container");
-    element.innerHTML += `<img alt="Ripped hajji" src="https://preview.redd.it/mlo2gwkop1b31.jpg?auto=webp&s=7702b73f6a4d0791d9006cb0b0eb8a17e3228b26"/>`
+    // Add the 'image' class to the new image element
+    element.innerHTML += `<img alt="Ripped hajji" src="https://preview.redd.it/mlo2gwkop1b31.jpg?auto=webp&s=7702b73f6a4d0791d9006cb0b0eb8a17e3228b26" class="image"/>`
   }
 </script>
+
+</body>
+</html>
